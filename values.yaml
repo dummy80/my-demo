@@ -1,0 +1,14 @@
+replicaCount: 1
+
+container:
+  containerPort: 8080
+  image:
+    repository: docker.io/cherivstav/demo-spring-restapi
+  
+service:
+  port: 8080
+  targetPort: 8080
+  
+route:
+  targetPort: 8080
+  

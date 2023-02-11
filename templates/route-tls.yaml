@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: {{ .Release.Name }}-tls-route
+spec:
+  host: {{ .Release.Name }}.apps.openshift.demo.li9.com
+  to:
+    kind: Service
+    name: {{ .Release.Name }}-service
+    weight: 100
+  port:
+    targetPort: {{ .Values.route.targetPort }}
+  tls:
+    termination: edge
+  wildcardPolicy: None
