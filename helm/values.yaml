@@ -1,3 +1,5 @@
+cluster: apps-crc.testing
+
 replicaCount: 1
 
 container:

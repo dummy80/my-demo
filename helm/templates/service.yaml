@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: openshift-test-service
+  name: {{ .Release.Name }}-service
 spec:
   selector:
-    app: openshift-test
+    app: {{ .Release.Name }}
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
