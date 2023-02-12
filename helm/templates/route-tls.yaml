@@ -3,7 +3,7 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: openshift-test-tls-route
 spec:
-  host: openshift-test-tls-route-ivan-cherepanov.apps.openshift.demo.li9.com
+  host: openshift-test-tls-route-ivan-cherepanov.apps-crc.testing
   to:
     kind: Service
     name: openshift-test-service

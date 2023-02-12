@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-demo
+spec:
+  destination:
+    name: ''
+    namespace: ivan-cherepanov
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: templates
+    repoURL: 'https://github.com/dummy80/my-demo/tree/master/helm'
+    targetRevision: HEAD
+  project: ivan-cherepanov
